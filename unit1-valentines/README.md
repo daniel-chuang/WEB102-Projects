@@ -10,20 +10,20 @@ Time spent: 4 hours spent in total
 
 The following **required** functionality is completed:
 
-- [ X ] **There is a unique theme for events or resources relevant to a specific community**
-- [ X ] **At least 10 unique resources or events are displayed in a responsive card format**
+- [x] **There is a unique theme for events or resources relevant to a specific community**
+- [x] **At least 10 unique resources or events are displayed in a responsive card format**
 
 The following **optional** features are implemented:
 
-- [ X ] Buttons or links to a related resources are on each card component
+- [x] Buttons or links to a related resources are on each card component
 - [ ] The site is responsive for both desktop and mobile formats
 
 The following **additional** features are implemented:
 
-- [ X ] Added a nice drop shadow in the background!
-- [ X ] Made it so that buttons bring you to a new page
-- [ X ] Refactored so that the props data are passed through an array of data, rather
-  than hard coded into the Event components
+- [x] Added a nice drop shadow in the background!
+- [x] Made it so that buttons bring you to a new page
+- [x] Refactored so that the props data are passed through an array of data, rather
+      than hard coded into the Event components
 
 ## Video Walkthrough
 
@@ -42,7 +42,7 @@ GIF created with OBS and EZGif for conversion
 
 ## Notes
 
-IIt took me some time to format the flexboxes correctly, since it has been a while since I've used those.
+It took me some time to format the flexboxes correctly, since it has been a while since I've used those.
 
 It also took me some time to get use to the React syntax, but by looking at example from our lecture + lab I was able to figure it out!
 
