@@ -23,6 +23,7 @@ const cards = [
       "The dataset's distribution is non-parametric, meaning we don't make any assumptions about the data's structure",
       'Similarity is measured by the distance between data points. The closer the data points, the more similar they are',
     ],
+    type: 'Discriminative Classification',
   },
   {
     model: 'The Perceptron',
@@ -32,13 +33,14 @@ const cards = [
     diagram:
       'https://quicklearnology.com/wp-content/uploads/2023/03/Rosenblatts-perceptron.png',
     notes:
-      "The Perceptron is a simple algorithm suitable for large scale learning. It's a type of linear classifier, i.e a classification algorithm that makes its predictions based on a linear predictor function combining a set of weights with the feature vector. The algorithm allows for online learning, in that it processes elements in the training set one at a time. The Perceptron is also used in supervised learning of binary classifiers. It's based on a slightly different concept than other classifiers, using a hyperplane to separate the different classes in the input vector space. The Perceptron algorithm dates back to the late 1950s and is the basis of a neural network.",
+      "The Perceptron is a simple algorithm suitable for large scale learning. It's a type of linear Classification, i.e a classification algorithm that makes its predictions based on a linear predictor function combining a set of weights with the feature vector. The algorithm allows for online learning, in that it processes elements in the training set one at a time. The Perceptron is also used in supervised learning of binary Classifications. It's based on a slightly different concept than other Classifications, using a hyperplane to separate the different classes in the input vector space. The Perceptron algorithm dates back to the late 1950s and is the basis of a neural network.",
     assumptions: [
       '1. Linear Separability: The data it is trained on is linearly separable.',
       '2. Binary Classification: Perceptrons are designed for binary classification problems.',
       '3. Independence: Each feature in the data set is independent of all other features.',
       '4. Fixed Learning Rate: The learning rate is assumed to be fixed.',
     ],
+    type: 'Discriminative Classification',
   },
   {
     model: 'K-Means Clustering',
@@ -57,6 +59,7 @@ const cards = [
       'The variance of the distribution of each attribute (variable) is spherical.',
       'All clusters have the same variance.',
     ],
+    type: 'Unsupervised Clustering',
   },
   {
     model: 'Gaussian Mixture Model (GMM)',
@@ -73,6 +76,24 @@ const cards = [
       'Independence: GMM assumes that there are no relationships among the features in the dataset.',
       'Sufficient data: GMM assumes that there is enough data available to create a covariance matrix. This is necessary for calculating the Gaussian distributions.',
     ],
+    type: 'Unsupervised Clustering',
+  },
+  {
+    model: 'DBSCAN',
+    lectureLink:
+      'https://www.cs.cornell.edu/courses/cs4780/2024sp/lectures/lecturenote04.html',
+    demoLink:
+      'https://www.naftaliharris.com/blog/visualizing-dbscan-clustering/',
+    diagram:
+      'https://miro.medium.com/v2/resize:fit:1358/1*KqWII7sFp1JL0EXwJGpqFw.png',
+    notes:
+      'DBSCAN is a density-based clustering algorithm, with the capability to find arbitrary shape clusters and clusters with noise (outliers). It works on the concept of density reachability and density connectivity. DBSCAN groups together points that are close to each other in the feature space and have a sufficient number of neighbors. Points in low-density regions are classified as noise. Unlike K-Means or GMM, DBSCAN does not require the user to specify the number of clusters.',
+    assumptions: [
+      'Density: DBSCAN assumes clusters are dense regions in the data space separated by regions of lower object density.',
+      'Noise: DBSCAN assumes that the dataset could contain noise, i.e., data points that are not part of the cluster.',
+      'Arbitrary shape: DBSCAN can find clusters of arbitrary shapes. It can even find a cluster completely surrounded by a different cluster.',
+    ],
+    type: 'Unsupervised Clustering',
   },
   {
     model: 'MLE',
@@ -89,6 +110,7 @@ const cards = [
       'It assumes that the data is identically distributed, which means each data point follows the same probability distribution.',
       'It assumes that the data is independently distributed, which means each data point does not depend on any other data points.',
     ],
+    type: 'Statistical Method',
   },
   {
     model: 'MAP',
@@ -105,6 +127,7 @@ const cards = [
       'It assumes that the data is independently distributed, which means each data point does not depend on any other data points.',
       'It assumes a prior distribution of the parameters.',
     ],
+    type: 'Statistical Method',
   },
   {
     model: 'Naive Bayes',
@@ -114,13 +137,14 @@ const cards = [
     diagram:
       'https://miro.medium.com/v2/resize:fit:1400/1*39U1Ln3tSdFqsfQy6ndxOA.png',
     notes:
-      'Naive Bayes is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes classifier assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that a particular fruit is an apple or an orange or a banana and that is why it is known as "Naive".',
+      'Naive Bayes is a classification technique based on Bayes’ Theorem with an assumption of independence among predictors. In simple terms, a Naive Bayes Classification assumes that the presence of a particular feature in a class is unrelated to the presence of any other feature. Even if these features depend on each other or upon the existence of the other features, all of these properties independently contribute to the probability that a particular fruit is an apple or an orange or a banana and that is why it is known as "Naive".',
     assumptions: [
       'Naive Bayes assumes that all features are independent from each other.',
       'It assumes that every feature contributes equally to the outcome.',
       'It assumes that the data is identically distributed, which means each data point follows the same probability distribution.',
       'It assumes that the data is independently distributed, which means each data point does not depend on any other data points.',
     ],
+    type: 'Generative Classification',
   },
   {
     model: 'Logistic Regression',
@@ -137,6 +161,7 @@ const cards = [
       'It assumes that there is a linear relationship between the logit of the response and the predictor variables.',
       'It assumes that there is no multicollinearity among the predictor variables.',
     ],
+    type: 'Discriminative Classification',
   },
   {
     model: 'Gradient Descent',
@@ -151,6 +176,7 @@ const cards = [
       'Gradient Descent assumes that the function is differentiable.',
       'It assumes that the optimal solution is reachable through a descending path in the function graph.',
     ],
+    type: 'Statistical Method',
   },
   {
     model: 'Adagrad',
@@ -165,6 +191,7 @@ const cards = [
       'Adagrad assumes that the function is differentiable.',
       'It assumes that the optimal solution is reachable through a descending path in the function graph.',
     ],
+    type: 'Statistical Method',
   },
   {
     model: 'Newtons Method',
@@ -178,6 +205,7 @@ const cards = [
       'Newtons Method assumes that the function is twice differentiable.',
       'It assumes that the function has a root.',
     ],
+    type: 'Statistical Method',
   },
   {
     model: 'Linear Regression',
@@ -194,6 +222,7 @@ const cards = [
       'It assumes that there is no multicollinearity among the independent variables.',
       'It assumes that the residuals are homoscedastic.',
     ],
+    type: 'Regression',
   },
   {
     model: 'Support Vector Machine',
@@ -208,36 +237,76 @@ const cards = [
       'SVM assumes that the data it works with is in a specific format. Namely, it uses a series of binary labels to distinguish between data for different categories.',
       'It assumes that the data is linearly separable in a higher-dimensional space.',
     ],
+    type: 'Discriminative Classification (and Regression)',
   },
 ];
 function App() {
   // Required import for the math
 
   const [cardIndex, setCardIndex] = useState(0);
+  const [cardsReact, setCardsReact] = useState(cards);
+  const [key, setKey] = useState(Math.random()); // Force rerender
+  const [isCorrect, setIsCorrect] = useState('');
+  const [inputAnswer, setInputAnswer] = useState('');
+
+  const resetForm = () => {
+    setIsCorrect('');
+    setInputAnswer('');
+  };
 
   // TODO: Get this to work
   const nextCard = () => {
-    let nextIndex = -1;
-    do {
-      nextIndex = Math.floor(Math.random() * cards.length);
-    } while (nextIndex == cardIndex);
-    {
-    }
+    // let nextIndex = -1;
+    // do {
+    //   nextIndex = Math.floor(Math.random() * cards.length);
+    // } while (nextIndex == cardIndex);
+    // {
+    // }
 
-    console.log(nextIndex);
-    setCardIndex(nextIndex);
+    // console.log(nextIndex);
+    resetForm();
+    setCardIndex(cardIndex == cards.length - 1 ? 0 : cardIndex + 1);
   };
 
-  // const prevCard = () => {
-  //   setCardIndex(cardIndex == 0 ? cards.length - 1 : cardIndex - 1);
-  // }
+  const prevCard = () => {
+    resetForm();
+    setCardIndex(cardIndex == 0 ? cards.length - 1 : cardIndex - 1);
+  };
+
+  const shuffleAndReset = () => {
+    resetForm();
+    const shuffle = (array) => {
+      return array.sort(() => Math.random() - 0.5);
+    };
+
+    const cardsShuffled = shuffle(cardsReact);
+
+    setCardsReact(cardsShuffled);
+
+    setKey(Math.random()); // Forces rerender
+    setCardIndex(0);
+  };
+
+  const onCheckAnswer = (event) => {
+    event.preventDefault();
+
+    console.log(inputAnswer);
+
+    if (cardsReact[cardIndex].type === inputAnswer) {
+      setIsCorrect('correct');
+    } else {
+      setIsCorrect('wrong');
+    }
+  };
 
   return (
     <>
-      <div className="container inline">
+      <div className="container inline select-none">
         <h1 className="text-[40px]">Machine Learning Study Guide</h1>
         <h2>How well do you understand ML concepts from class?</h2>
-        <h3>Number of cards: {cards.length}</h3>
+        <h3>
+          Card {cardIndex + 1} out of {cards.length}
+        </h3>
 
         <Card
           model={cards[cardIndex].model}
@@ -246,9 +315,47 @@ function App() {
           diagram={cards[cardIndex].diagram}
           notes={cards[cardIndex].notes}
           assumptions={cards[cardIndex].assumptions}
+          type={cards[cardIndex].type}
         />
 
-        <button onClick={nextCard}>Next</button>
+        <div className="flex m-auto justify-center mb-2">
+          <button className="mr-2" onClick={prevCard}>
+            Prev
+          </button>
+          <form className="">
+            <input
+              className={
+                'rounded-sm p-3 mr-2 w-[300px] border-2 ' +
+                (() => {
+                  console.log(isCorrect);
+                  switch (isCorrect) {
+                    case 'correct':
+                      return 'border-green-400';
+                    case 'wrong':
+                      return 'border-red-400';
+                    default:
+                      return 'border-gray-400';
+                  }
+                })()
+              }
+              type="text"
+              placeholder="Guess the algorithm type"
+              value={inputAnswer}
+              onChange={(event) => setInputAnswer(event.target.value)}
+            />
+            <button
+              type="submit"
+              onClick={onCheckAnswer}
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Submit
+            </button>
+          </form>
+          <button className="ml-2" onClick={nextCard}>
+            Next
+          </button>
+        </div>
+        <button onClick={shuffleAndReset}>Shuffle and Restart</button>
       </div>
     </>
   );
