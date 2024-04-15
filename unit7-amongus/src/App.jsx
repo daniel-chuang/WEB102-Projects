@@ -29,7 +29,9 @@ function App() {
           key={post.id}
           className="post border-2 border-gray-300 p-4 m-2 rounded-lg"
         >
-          <h2>{post.name}</h2>
+          <Link to={`/view/${post.id}`}>
+            <h2>{post.name}</h2>
+          </Link>
           <p>{post.bio}</p>
           <p>{post.color}</p>
           <Link
